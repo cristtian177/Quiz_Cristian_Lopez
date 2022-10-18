@@ -1,0 +1,11 @@
+.numbers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem !important;
+    text-align: center;
+    text-decoration: none;
+    text-decoration-line: none;
+    width: 5rem;
+    height: 5rem;
+}

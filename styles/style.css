@@ -1,0 +1,9 @@
+.circulo {
+    -moz-border-radius: 50% !important;
+    -webkit-border-radius: 50% !important;
+    border-radius: 50% !important;
+}
+.pg_html{
+    width: 25%;
+    height: 25%;
+}

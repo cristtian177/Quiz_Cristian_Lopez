@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Pro</title>
+    <link rel="stylesheet" href="../styles/calculator_basic.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body style="background: #ccddf358 ">
+
+    <!-- 
+        Avanzado ~ La calculadora debe 
+        funcionar calculando mas de 2 
+        números y con diferentes operaciones 
+        al mismo tiempo
+    -->
+    
+    <h1 class="mt-5 text-center text-success">Pro Calculator </h1>
+
+    <section class="d-flex justify-content-center h-100">
+
+        <section  class="border border-dark m-4 p-2 shadow bg-light rounded " style="max-width:min-content;">
+
+            <div class="m-2 rounded shadow">
+                <p style="background-color: #00ff7b61;"
+                   id="display"
+                   class="rounded m-0 pe-2 text-justify text-break text-end fs-1"
+                    >
+                    Input Number
+                </p>
+            </div>
+            
+            <div>
+
+                <div class="d-flex justify-content-between" style="height: 4rem;">
+                    <a class="d-flex justify-content-center align-items-center w-50 fs-1 text-center rounded shadow m-1 bg-secondary text-light  text-decoration-none" onclick="substr()" >CE</a>
+                    <a class="d-flex justify-content-center align-items-center w-50 fs-1 text-center rounded shadow m-1 bg-secondary text-light  text-decoration-none" onclick="clear_var()" >C</a>
+                </div> <!-- CE-C -->
+            
+                <div class="d-flex justify-content-center">
+            
+                    <a class="rounded shadow m-1 bg-secondary text-light numbers text-decoration-none" onclick="get_number(7)" >7</a>
+                    <a class="rounded shadow m-1 bg-secondary text-light numbers text-decoration-none" onclick="get_number(8)" >8</a>
+                    <a class="rounded shadow m-1 bg-secondary text-light numbers text-decoration-none" onclick="get_number(9)" >9</a>
+                    <a class="rounded shadow m-1 bg-secondary text-light numbers text-decoration-none" onclick="get_number('*')" >x</a>
+            
+                </div> <!-- 7-8-9-* -->
+            
+                <div class="d-flex justify-content-center">
+            
+                    <a class="rounded shadow m-1 bg-secondary text-light numbers text-decoration-none" onclick="get_number(4)" >4</a>
+                    <a class="rounded shadow m-1 bg-secondary text-light numbers text-decoration-none" onclick="get_number(5)" >5</a>
+                    <a class="rounded shadow m-1 bg-secondary text-light numbers text-decoration-none" onclick="get_number(6)" >6</a>
+                    <a class="rounded shadow m-1 bg-secondary text-light numbers text-decoration-none" onclick="get_number('-')" >-</a>
+                    
+                </div> <!-- 4-5-6 - -->
+            
+                <div class="d-flex justify-content-center">
+            
+                    <a class="rounded shadow m-1 bg-secondary text-light numbers text-decoration-none" onclick="get_number(1)" >1</a>
+                    <a class="rounded shadow m-1 bg-secondary text-light numbers text-decoration-none" onclick="get_number(2)" >2</a>
+                    <a class="rounded shadow m-1 bg-secondary text-light numbers text-decoration-none" onclick="get_number(3)" >3</a>
+                    <a class="rounded shadow m-1 bg-secondary text-light numbers text-decoration-none" onclick="get_number('+')" >+</a>
+                    
+                </div> <!-- 1-2-3-+ -->
+            
+                <div class="d-flex justify-content-center">
+            
+                    <a class="rounded shadow m-1 bg-secondary text-light numbers text-decoration-none" onclick="get_number(0)" >0</a>
+                    <a class="rounded shadow m-1 bg-secondary text-light numbers text-decoration-none" onclick="get_number('.')" >.</a>
+                    <a class="rounded shadow m-1 bg-secondary text-light numbers text-decoration-none" onclick="print_result('=')" >=</a>
+                    <a class="rounded shadow m-1 bg-secondary text-light numbers text-decoration-none" onclick="get_number('/')" >/</a>
+                    
+                </div> <!-- 0-.-=-/ -->
+            
+            </div>
+
+        </section>  
+
+    </section>
+
+    <script src="../script/calculator_pro.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

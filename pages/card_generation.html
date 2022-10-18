@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Generation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body 
+    class="d-flex justify-content-center" 
+    style="background: linear-gradient(45deg, #ffffff 31%, #00000058 70%);">
+    
+
+    <!-- 
+        Generación de carnet - se debe construir 
+        un algoritmo capaz de capturar los datos de 
+        una persona 
+        Nombres, 
+        Apellidos,
+        Edad, 
+        Cargo, 
+        RH, 
+        numero de documento y 
+        teléfono
+    -->
+
+    <section 
+        class="bg-light w-50 p-2 m-5 rounded-2"
+        style="background: linear-gradient(45deg, #00000058 11%, #ffffff 50%);">
+       
+        <h1 class="text-center text-success"> Generate your Card </h1>
+        
+        <section>
+            <div class="mt-5 mb-5 d-flex justify-content-center w-100">
+
+                <div 
+                    class="w-75 border p-4 rounded shadow"
+                    style="background: linear-gradient(45deg, #ffffff 31%, #00000058 70%);">
+    
+                    <h2  class="text-center mb-4 text-primary">Please Enter Your Data</h2>
+    
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Names</label>
+                        <input type="text" class="form-control shadow" id="name" placeholder="Names">
+                    </div> <!-- name -->
+    
+                    <div class="mb-3">
+                        <label for="lastname" class="form-label">Last Names</label>
+                        <input type="text" class="form-control shadow" id="lastname" placeholder="Last Names">
+                    </div> <!-- lastname -->
+
+                    <div class="mb-3 w-25">
+                        <label for="age" class="form-label">Age</label>
+                        <input type="text" class="form-control shadow" id="age" placeholder="1234567890">
+                    </div> <!-- age -->
+    
+                    <div class="mb-3">
+                        <label for="position" class="form-label">Position</label>
+                        <input type="text" class="form-control shadow" id="position" placeholder="Lawyer, Engineer...">
+                    </div> <!-- position -->
+
+                    <div class="mb-3 w-25">
+                        <label for="rh" class="form-label">Rh</label>
+                        <input type="text" class="form-control shadow" id="rh" placeholder="Ex: AB+ ...">
+                    </div> <!-- rh -->
+
+                    <div class="mb-3 w-50">
+                        <label for="identification_number" class="form-label">Identification Number</label>
+                        <input type="text" class="form-control shadow" id="identification_number" placeholder="1234567890">
+                    </div> <!-- identification_number -->
+
+                    <div class="mb-3 w-50 ">
+                        <label for="phone_number" class="form-label">Phone Number</label>
+                        <input type="text" class="form-control shadow shadow" id="phone_number" placeholder="Ex: +57 123456789">
+                    </div> <!-- phone_number -->
+
+                    <div class="d-flex justify-content-center">
+                        <a class="btn-danger btn w-50 " onclick="generate()" >Generate</a>
+                    </div> <!-- generate -->
+
+                    <div class="d-flex justify-content-center">
+                        <a class="btn-warning btn w-50 " onclick="new_card()" >New Card</a>
+                    </div> <!-- new_car -->
+    
+                </div>
+
+            </div>
+    
+        </section>
+    
+    </section>
+
+   
+
+    <div></div>
+    <script src="../script/card_generation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
