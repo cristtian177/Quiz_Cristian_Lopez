@@ -1,36 +1,51 @@
 let Card_DataBase = []
 
 function empty_fields(recived){
-  
+
+    let counter = 0
+
     if(recived.name === ""){
+        counter++
         document.getElementById("name").style.borderColor="#FF0000"
     }else document.getElementById("name").style.borderColor="#ffffff"
 
     if(recived.lastname === ""){
+        counter++
         document.getElementById("lastname").style.borderColor="#FF0000"
     }else document.getElementById("lastname").style.borderColor="#ffffff"
 
     if(recived.age === ""){
+        counter++
         document.getElementById("age").style.borderColor="#FF0000"
     }else document.getElementById("age").style.borderColor="#ffffff"
 
     if(recived.position === ""){
+        counter++
         document.getElementById("position").style.borderColor="#FF0000"
     }else document.getElementById("position").style.borderColor="#ffffff"
 
     if(recived.rh === ""){
+        counter++
         document.getElementById("rh").style.borderColor="#FF0000"
     }else document.getElementById("rh").style.borderColor="#ffffff"
     
     if(recived.identification_number === ""){
+        counter++
         document.getElementById("identification_number").style.borderColor="#FF0000"
     }else document.getElementById("identification_number").style.borderColor="#ffffff"
     
     if(recived.phone_number === ""){
+        counter++
         document.getElementById("phone_number").style.borderColor="#FF0000"
     }else document.getElementById("phone_number").style.borderColor="#ffffff"
 
+    if(counter!=0){
+        alert('Complete in all the Fields')
+        return empty_fields
+    }
+
 }
+
 function generate() { 
 
     let user = {
@@ -43,11 +58,50 @@ function generate() {
         identification_number : document.getElementById("identification_number").value
     } 
 
-    empty_fields(user)
+    /* empty_fields(user) */
 
+    let counter = 0
+
+    if(user.name === ""){
+        counter++
+        document.getElementById("name").style.borderColor="#FF0000"
+    }else document.getElementById("name").style.borderColor="#ffffff"
+
+    if(user.lastname === ""){
+        counter++
+        document.getElementById("lastname").style.borderColor="#FF0000"
+    }else document.getElementById("lastname").style.borderColor="#ffffff"
+
+    if(user.age === ""){
+        counter++
+        document.getElementById("age").style.borderColor="#FF0000"
+    }else document.getElementById("age").style.borderColor="#ffffff"
+
+    if(user.position === ""){
+        counter++
+        document.getElementById("position").style.borderColor="#FF0000"
+    }else document.getElementById("position").style.borderColor="#ffffff"
+
+    if(user.rh === ""){
+        counter++
+        document.getElementById("rh").style.borderColor="#FF0000"
+    }else document.getElementById("rh").style.borderColor="#ffffff"
+    
     if(user.identification_number === ""){
-        return alert("Empty Identification Number")
+        counter++
+        document.getElementById("identification_number").style.borderColor="#FF0000"
+    }else document.getElementById("identification_number").style.borderColor="#ffffff"
+    
+    if(user.phone_number === ""){
+        counter++
+        document.getElementById("phone_number").style.borderColor="#FF0000"
+    }else document.getElementById("phone_number").style.borderColor="#ffffff"
+
+    if(counter!=0){
+        alert('Complete in all the Fields')
+        return empty_fields
     }
+
     for(let local_database of Card_DataBase ){
             if(user.identification_number === local_database.identification_number){
                 return[ 
@@ -60,12 +114,12 @@ function generate() {
     console.log(`uploaded to Card_DataBase`)
     Card_DataBase.push(user)
     
-    
 }
-function new_card () {
-    console.log(`Card_DataBase\n`)
-    console.log(Card_DataBase)
-    console.log(`jhgjhg\n`)
 
+function new_card () {
+
+    console.log(`Card_DataBase`)
+    console.log(Card_DataBase)
+    console.log(``)
 }
 
